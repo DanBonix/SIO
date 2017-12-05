@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="20908c1d-e5b2-4b46-87b5-e6ecc31f5d75" name="DiagrammeVoyage" linkedPackageId="e57eca16-ed85-48ea-9667-0565da69caa0" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="7281e775-1306-47a5-b85e-0c9bd5be9aa9">
+      <profileInstance Id="475f8c87-37b3-42c0-9350-960e1a407d30" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="c2227f43-650b-42a9-bb6b-5e5ed83f5a75">
+      <profileInstance Id="cda43dfb-241d-4f32-aa4c-61bba2b4c8f2" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="bfe16c49-de04-491e-9559-d13d99836a16" name="Voyage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e2ec02d-b359-4bd7-ba08-12313f78b71f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="717a7989-2219-4bae-9b82-b0cc07768f0b" name="Agent de voyage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="de06c0e1-65ae-414c-b74b-f2605bb05629" />
+        <targetEnds>
+          <association Id="d25375db-133d-46db-a5b8-20bcd5dbfa72" isDerived="false" sourceEndRoleName="Agent de voyage" targetEndRoleName="Organiser son Voyage" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a92e5d71-a9d0-4b23-8f7e-a7b2d601506a" LastKnownName="Organiser son Voyage" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0e619375-43d5-43a8-9fd5-3da96b26349c" name="Agent de voyage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="697a5969-e20f-4155-a493-dd014a35bb1d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="0eabfcf9-c3cd-4b05-a6a5-79bb295536d1" name="Organiser son Voyage" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="31453480-bd3e-4577-807d-a37ed93071c6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="422cddcd-9ed5-40c3-af45-31ce3b928ff1" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="7c103fbf-ab55-4edc-a52d-cb17c271d9a6" name="Reserver Chambre Hotel" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e5b781c0-6a04-4ee0-b67d-98c9e0f1c1e4" />
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="4c77a357-7a60-473a-9be1-a3d5be3fd1d9" name="Réserver Taxi" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="84fd5684-ffcd-49b7-a853-e626826a37f5" />
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d082a04e-2c19-4869-977c-9d73f08ce583" name="Réserver Billet" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2af94622-a3b1-409b-99b0-1fed6f6f5d23" />
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="a92e5d71-a9d0-4b23-8f7e-a7b2d601506a" name="Organiser son Voyage" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d54a9a98-a409-4448-8663-732b26117998" />
+        <extendedCases>
+          <extend Id="da9b974d-06f8-4d95-a57f-455b7a3367d1">
+            <useCaseMoniker Id="93a31a33-4a73-4e86-ac2a-d82d2a84b3e6" LastKnownName="Etablir une facture détaillée" />
+            <elementDefinition Id="6510a45b-6a4c-4ab1-bb68-50f3f990e280" />
+          </extend>
+        </extendedCases>
+        <additions>
+          <include Id="54383436-f38e-4ebf-8b24-e6b8e397f7ca">
+            <useCaseMoniker Id="7c103fbf-ab55-4edc-a52d-cb17c271d9a6" LastKnownName="Reserver Chambre Hotel" />
+            <elementDefinition Id="a120c930-6928-4db3-8c1a-fbdad33d8e1b" />
+          </include>
+          <include Id="682ed276-62d7-4406-86e5-9280830377d6">
+            <useCaseMoniker Id="4c77a357-7a60-473a-9be1-a3d5be3fd1d9" LastKnownName="Réserver Taxi" />
+            <elementDefinition Id="7ff0ee1a-179c-49c5-981f-f5f90d8b2db8" />
+          </include>
+          <include Id="ae3ff200-47a4-4668-9585-a53ea3779c16">
+            <useCaseMoniker Id="d082a04e-2c19-4869-977c-9d73f08ce583" LastKnownName="Réserver Billet" />
+            <elementDefinition Id="dabb1ca1-b069-4be8-8bbb-eeece949ad72" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="93a31a33-4a73-4e86-ac2a-d82d2a84b3e6" name="Etablir une facture détaillée" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0ed347d6-9a63-498a-bc03-510e412046ea" />
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="d0e61d2e-21f0-4dde-884b-5b448c9667a1" name="Train" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b194970a-ad54-480a-bb69-b5273fe4ace3" />
+        <generalsInternal>
+          <generalization Id="9c4964b4-0a14-4af3-b9a9-cb600ea4c42e" isSubstitutable="false">
+            <useCaseMoniker Id="d082a04e-2c19-4869-977c-9d73f08ce583" LastKnownName="Réserver Billet" />
+            <elementDefinition Id="271a57de-2bfa-477f-9fec-05a5e6c5aebd" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="0fa130c9-46a2-4f35-9dfe-f0e5e02ec0ac" name="Avion" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="fa0d3098-1b3f-4f53-b0a0-221855daa8f9" />
+        <generalsInternal>
+          <generalization Id="abb1c96b-4178-4a14-a17e-93b4ab32f60a" isSubstitutable="false">
+            <useCaseMoniker Id="d082a04e-2c19-4869-977c-9d73f08ce583" LastKnownName="Réserver Billet" />
+            <elementDefinition Id="575d7beb-cdcd-4b05-b19a-f0a0d9293e9b" />
+          </generalization>
+        </generalsInternal>
+        <subjects>
+          <subsystemMoniker Id="bfe16c49-de04-491e-9559-d13d99836a16" LastKnownName="Voyage" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="e57eca16-ed85-48ea-9667-0565da69caa0" name="TPCasUtilisation">
+    <elementDefinition Id="9e609a14-c8ba-443f-851f-8b88a72a2a81" />
+  </package>
+</useCaseModelRoot>
