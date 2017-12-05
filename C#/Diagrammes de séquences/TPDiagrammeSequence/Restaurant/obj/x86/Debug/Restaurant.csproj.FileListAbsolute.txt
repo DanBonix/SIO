@@ -1,0 +1,4 @@
+Z:\SLAM 4\TPDiagrammeSequence_10112017\Restaurant\bin\Debug\Restaurant.exe
+Z:\SLAM 4\TPDiagrammeSequence_10112017\Restaurant\bin\Debug\Restaurant.pdb
+Z:\SLAM 4\TPDiagrammeSequence_10112017\Restaurant\obj\x86\Debug\Restaurant.exe
+Z:\SLAM 4\TPDiagrammeSequence_10112017\Restaurant\obj\x86\Debug\Restaurant.pdb
