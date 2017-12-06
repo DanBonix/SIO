@@ -1,4 +1,4 @@
-# Bienvenue sur le portfolio de Dan BONIX, élève en seconde année de BTS Services Inforamtiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM) au Lycée Jean-Jacques Rousseau à Montmorency
+Bienvenue sur le portfolio de Dan BONIX, élève en seconde année de BTS Services Inforamtiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM) au Lycée Jean-Jacques Rousseau à Montmorency
 
 Vous trouverez ici :
 
