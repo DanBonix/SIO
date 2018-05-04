@@ -12,9 +12,26 @@ class AuteurModel extends CI_Model {
     function get_auteur($id) {
         return $this->db->get_where('auteur',array('id'=>$id))->row_array();
     }
-
-    function get_all_auteurs() {
-        return $this->db->get('auteur')->result_array();
+    
+    function get_count()
+    {
+        $count = $this->db->query('SELECT * FROM auteur');
+        
+        return $count->num_rows();
+    }
+    
+    function get_all_auteurs($start = NULL, $count = NULL) {
+        if(isset($start) && isset($count))
+        {
+            $res = $this->db->get('auteur',$count, $start)->result_array();
+        }
+        
+        else
+        {
+            $res = $this->db->get('auteur')->result_array();
+        }
+        
+        return $res;
     }
 
     function add_auteur($params) {

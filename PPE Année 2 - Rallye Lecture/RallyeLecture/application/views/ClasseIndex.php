@@ -1,7 +1,7 @@
 <!-- navigation -->
 <div class="navigation">
     <a href="<?php echo base_url(); ?>">Home</a>
-    <a href="<?php echo base_url('classe/add'); ?>">Ajouter</a>
+    <a href="<?php echo site_url('classe/add'); ?>">Ajouter</a>
 </div>
 
 <table>

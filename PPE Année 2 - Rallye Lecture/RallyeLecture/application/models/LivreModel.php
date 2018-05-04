@@ -23,13 +23,32 @@ class LivreModel extends CI_Model {
     function get_livre($id) {
         return $this->db->get_where('livre',array('id'=>$id))->row_array();
     }
-
-    function get_all_livres() {
-        return $this->db->get('livre')->result_array();
+    
+    function get_count()
+    {
+        $count = $this->db->query('SELECT * FROM livre');
+        
+        return $count->num_rows();
+    }
+    
+    function get_all_livres($start = NULL, $count = NULL) {
+        if(isset($start) && isset($count))
+        {
+            $this->db->join('auteur', 'livre.idAuteur = auteur.id');
+            $res = $this->db->get('livre',$count, $start)->result_array();
+        }
+        
+        else
+        {
+            $res = $this->db->get()->result_array();
+        }
+        
+        return $res;
     }
 
     function add_livre($params) {
         $this->db->insert('livre',$params);
+        
         return $this->db->insert_id();
     }
 
@@ -41,10 +60,25 @@ class LivreModel extends CI_Model {
     function delete_livre($id) {
         $this->db->delete('livre',array('id'=>$id));
     }
+    
+    function search_livre()
+    {
+        $recherche = $this->input->post('recherche');
+        
+        $query = $this->db->like('titre','%$recherche%');
+        
+        $res = $this->db->get('livre')->result_array();
+        
+        return $res;
+    }
 
     function get_auteur($id) {
-        $idAuteur=$this->db->get_where('livre',array('id'=>$id))->row_array()['idAuteur'];
-        return $this->hasOneAuteur->get_auteur($idAuteur);
+        $this->db->select('idAuteur, nom');
+        $this->db->from('livre');
+        $this->db->join('auteur', 'idAuteur = id');
+        $nom=$this->db->get_where('livre',array('id'=>$id))->row_array()['nom'];
+        
+        return $this->hasOneAuteur->get_auteur($nom);
     }
 
     function get_editeur($id) {
@@ -56,5 +90,4 @@ class LivreModel extends CI_Model {
         $idQuizz=$this->db->get_where('livre',array('id'=>$id))->row_array()['idQuizz'];
         return $this->hasOneQuizz->get_quizz($idQuizz);
     }
-
 }

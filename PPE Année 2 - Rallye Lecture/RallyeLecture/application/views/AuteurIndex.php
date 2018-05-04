@@ -1,7 +1,7 @@
 <!-- navigation -->
 <div class="navigation">
-    <a href="<?php echo base_url(); ?>">Home</a>
-    <a href="<?php echo base_url('auteur/add'); ?>">Ajouter</a>
+    <a href="<?php echo site_url(); ?>">Home</a>
+    <a href="<?php echo site_url('auteur/add'); ?>">Ajouter</a>
 </div>
 <table>
     <tr>
@@ -19,4 +19,6 @@
             </td>
         </tr>
     <?php endforeach; ?>
-</table>
+</table><br>
+    <?php echo "Il y a ".$count." auteurs"; ?><br />
+    <?php echo $links; ?>
