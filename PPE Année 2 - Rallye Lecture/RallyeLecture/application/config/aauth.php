@@ -132,7 +132,7 @@ $config_aauth["default"] = array(
  'name'                           => 'Admin',
  'email_config'                   => false,
 
- 'verification'                   => false,
+ 'verification'                   => true,
  'verification_link'              => '/account/verification/',
  'reset_password_link'            => '/account/reset_password/',
 
